@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_appointment_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorAccent"
+        android:minHeight="?attr/actionBarSize" />
+
+    <EditText
+        android:id="@+id/et_user_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_view"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:hint="Login"
+        android:nextFocusDown="@+id/et_password"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_user_id"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:hint="Password"
+        android:imeActionId="1"
+        android:imeActionLabel="Login"
+        android:imeOptions="actionGo"
+        android:inputType="textPassword"
+        android:singleLine="true" />
+
+    <Button
+        android:id="@+id/btn_login"
+        style="@android:style/Widget.DeviceDefault.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/et_password"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:text="New User"
+        android:textColor="@android:color/holo_blue_light" />
+
+    <CheckBox
+        android:id="@+id/show_password"
+        style="@android:style/Widget.DeviceDefault.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/et_password"
+        android:layout_alignStart="@+id/et_password"
+        android:layout_alignTop="@+id/btn_login"
+        android:text="Show Password"
+        android:textColor="@android:color/holo_blue_light" />
+
+    <Button
+        android:id="@+id/btn_forgot_password"
+        style="@android:style/Widget.DeviceDefault.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot your password?"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_below="@+id/button"
+        android:layout_alignLeft="@+id/show_password"
+        android:layout_alignStart="@+id/show_password" />
+
+    <Button
+        android:id="@+id/btn_settings"
+        style="@android:style/Widget.DeviceDefault.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="launchSettings"
+        android:text="Environment Settings"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_below="@+id/btn_forgot_password"
+        android:layout_alignLeft="@+id/btn_forgot_password"
+        android:layout_alignStart="@+id/btn_forgot_password" />
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorAccent"
+        android:src="@drawable/smalllogo"
+        android:visibility="visible"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:id="@+id/button"
+        android:layout_below="@+id/btn_login"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
